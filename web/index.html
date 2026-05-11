@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Nebula Mozi hivatalos weboldala" />
+    <meta name="keywords" content="Mozi, Űr, Cinema" />
+    <meta name="author" content="Nebula Mozi 2000 Kft." />
 
     <title>Nebula Mozi</title>
 
@@ -17,6 +20,7 @@
 
     <!-- Előre elkészített stílusok -->
     <link rel="stylesheet" href="assets/custom.css">
+    <link rel="stylesheet" href="mozi.css">
 
 </head>
 
@@ -38,20 +42,11 @@
                     aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    Menüelemek
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#bemutatkozas">Bemutatkozás</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#musor">Moziműsor</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#filmajanlo">Filmajánló</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#hirlevel">Hírlevél</a>
-                        </li>
+                        <li class="navitem"><a class="nav-link" href="#bemutatkozas">Bemutatkozás</a></li>
+                        <li class="navitem"><a class="nav-link" href="#musor">Moziműsor</a></li>
+                        <li class="navitem"><a class="nav-link" href="#filmajanlo">Filmajánló</a></li>
+                        <li class="navitem"><a class="nav-link" href="#hirlevel">Hírlevél</a></li>
                     </ul>
                 </div>
             </div>
@@ -172,7 +167,7 @@
                                 </thead>
                                 <tbody>
 
-                                    <div>
+                                    <tr>
                                         <td>08:00</td>
                                         <td></td>
                                         <td></td>
@@ -181,9 +176,9 @@
                                         <td></td>
                                         <td>Kozmosz 1-2</td>
                                         <td>Kozmosz 5-6</td>
-                                    </div>
+                                    </tr>
 
-                                    <div>
+                                    <tr>
                                         <td>12:00</td>
                                         <td></td>
                                         <td>Star Wars: Egy új remény</td>
@@ -192,9 +187,9 @@
                                         <td>2001: Űrodüsszeia</td>
                                         <td>Kozmosz 3-4</td>
                                         <td>Kozmosz 7-8</td>
-                                    </div>
+                                    </tr>
 
-                                    <div>
+                                    <tr>
                                         <td>16:00</td>
                                         <td></td>
                                         <td>Star Wars: Egy új remény</td>
@@ -203,9 +198,9 @@
                                         <td>2001: Űrodüsszeia</td>
                                         <td>Csillagok között</td>
                                         <td>Csillagok között</td>
-                                    </div>
+                                    </tr>
 
-                                    <div>
+                                    <tr>
                                         <td>20:00</td>
                                         <td></td>
                                         <td></td>
@@ -214,7 +209,7 @@
                                         <td>2001: Űrodüsszeia</td>
                                         <td>Csillagok között</td>
                                         <td>Csillagok között</td>
-                                    </div>
+                                    </tr>
 
                                 </tbody>
                             </table>
@@ -244,8 +239,9 @@
                 </div>
 
                 <!--Filmkártyák -->
-                <div id="filmkartyak" class=" text-black">
+                <div id="filmkartyak" class="row row-cols-1 row-cols-md-3 g-4 text-black">
 
+                    <div class="col">
                     <div class="card h-100 shadow border-0">
                         <img class="card-img-top" src="assets/images/Star_wars.jpg" alt="Star Wars plakát" />
                         <div class="card-body p-4">
@@ -271,17 +267,20 @@
                             </div>
                         </div>
                     </div>
+                    </div>
 
+                    <div class="col">
                     <div class="card h-100 shadow border-0">
-                        <img class="card-img-top" src="" alt="" />
+                        <img class="card-img-top" src="assets/images/martian.jpg" alt="A Marsi moziplakát" />
                         <div class="card-body p-4">
-                            <div class="badge rounded-pill mb-2">Badge</div>
+                            <div class="badge bg-danger rounded-pill mb-2">Újdonság</div>
                             <a class="text-decoration-none link-dark stretched-link" href="#">
-                                <h5 class="card-title mb-3">Cím</h5>
+                                <h5 class="card-title mb-3">A marsi</h5>
                             </a>
-                            <p class="card-text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation
+                            <p class="card-text mb-0">Andy Wair regénye alapján készült mű az egyik legpontosabb
+                                leírás a jelenkori tudomány állása szerint az űrutazás viszontagságairól.
+                                A történet középpontjában Mark Watney amerikai asztronauta áll, aki egyedül marad a
+                                Marson, így rögtönöznie kell a túlélése érdekében.
                             </p>
                         </div>
                         <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
@@ -290,14 +289,16 @@
                                     <img class="rounded-circle" src="assets/images/tickets.png" alt="Jegy ikon" />
                                     <div class="small">
                                         <div class="fw-bold">Következő vetítések:</div>
-                                        <div class="text-muted">day1</div>
-                                        <div class="text-muted">day2</div>
+                                        <div class="text-muted">Szerda, 20:00</div>
+                                        <div class="text-muted">Csütörtök 8:00, 12:00</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    </div>
 
+                    <div class="col">
                     <div class="card h-100 shadow border-0">
                         <img class="card-img-top" src="assets/images/space_odyssey.jpg"
                             alt="2001: Űrodüsszeia plakát" />
@@ -323,6 +324,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
 
                 </div>
@@ -389,6 +391,7 @@
     <!-- Bootstrap és függőségei-->
     <script src="assets/jquery.slim.min.js"></script>
     <script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="mozi.js"></script>
 
 </body>
 
